@@ -1,0 +1,122 @@
+/*set some default styling*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #5d5954;
+   
+}
+.logo span{
+    color: #f2e9e9;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+ul.nav-links{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+ul.nav-links a{
+    color: #f2e9e9;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: .9em;
+}
+.bugger{
+    display: none;
+}
+
+.bugger div{
+    width: 1.2em;
+    height: .2em;
+    background-color: #f2e9e9;
+    margin: 5px;
+    transform-style: all 0.5s ease;
+}
+
+
+
+
+
+@media screen and (max-width:1024px){
+    ul.nav-links{
+    width: 50%;
+}
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        height: 92vh;
+        background-color: #5d5954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    ul.nav-links li{
+        opacity: 0;
+    }
+    .bugger{
+        display: block;
+        cursor: pointer;
+        
+    }
+    
+    
+    
+    
+}
+.nav-active{
+        transform: translateX(0%);
+        background-color: #5d5954;
+    }
+
+
+@keyframes navlinkSlide{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+         transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+   transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+
+
+
+
